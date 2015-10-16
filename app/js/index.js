@@ -2,8 +2,10 @@
 
 var dribbbleapi = require('../dribbbleapi.js');
 var updateFinished = false;
+var pageIndex = 1;
+var perPage = 50;
 
-dribbbleapi.updateJSON(function(data) {
+dribbbleapi.getData(pageIndex, perPage, function(data) {
   updateUI(data);
   updateFinished = true;
 });
@@ -28,8 +30,9 @@ function checkScrollPos() {
   if ((updateFinished && window.scrollY + window.innerHeight) >= document.body.scrollHeight - 500 && (window.scrollY + window.innerHeight) > 1000) {
     updateFinished = false;
     console.log('scrolling near bottom with a scrollY of:' + (window.scrollY + window.innerHeight));
-    dribbbleapi.updateJSON(function(data) {
+    dribbbleapi.getData(pageIndex, perPage, function(data) {
       updateUI(data);
+      pageIndex++;
       updateFinished = true;
     });
   }
