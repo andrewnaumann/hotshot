@@ -1,0 +1,17 @@
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}
