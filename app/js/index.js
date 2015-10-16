@@ -5,10 +5,14 @@ var updateFinished = false;
 var pageIndex = 1;
 var perPage = 50;
 
-dribbbleapi.getData(pageIndex, perPage, function(data) {
-  updateUI(data);
-  updateFinished = true;
-});
+function init(){
+  dribbbleapi.getData(pageIndex, perPage, function(data) {
+    updateUI(data);
+    updateFinished = true;
+  });
+  
+  setInterval(checkScrollPos, 250);
+}
 
 function updateUI(data) {
   var elShots, imageUrl;
@@ -26,6 +30,7 @@ function updateUI(data) {
   }
 }
 
+// Check scroll position and request more data if reaching the end.
 function checkScrollPos() {
   if ((updateFinished && window.scrollY + window.innerHeight) >= document.body.scrollHeight - 500 && (window.scrollY + window.innerHeight) > 1000) {
     updateFinished = false;
@@ -38,6 +43,7 @@ function checkScrollPos() {
   }
 }
 
+init();
 
-setInterval(checkScrollPos, 250);
+
 
