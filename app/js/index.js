@@ -8,6 +8,7 @@ var perPage = 50;
 function init(){
   dribbbleapi.getData(pageIndex, perPage, function(data) {
     updateUI(data);
+    pageIndex++;
     updateFinished = true;
   });
   
