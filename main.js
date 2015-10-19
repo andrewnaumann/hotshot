@@ -14,9 +14,16 @@ var mb = menubar({
   width: 400,
   'max-width': 400,
   'min-height': 300,
-  height: 700
+  height: 700,
+  preloadWindow: true
 });
 
 app.on('window-all-closed', function() {
   app.quit();
+});
+
+
+mb.on('show', function(){
+  mb.window.webContents.send('focus');
+//  mb.window.openDevTools();
 });
