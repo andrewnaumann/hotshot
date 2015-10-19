@@ -11,7 +11,28 @@ img {
   max-width: 100%;
 }
 
-body {
-  -webkit-app-region: drag;
-  -webkit-user-select: none;
+#refresh {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0,0,0,.8);
+  
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
 }
+
+#refresh.show {
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+#refresh h1 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFF;
+  text-align: center;
+}
+
