@@ -9,6 +9,7 @@ var minRefreshTimeInMin = 2;
 var elRefreshScreen = document.getElementById('refresh');
 
 function init(){
+  refreshShots();
   setInterval(checkScrollPos, 250);
 }
 
