@@ -16,7 +16,7 @@ img {
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
   background: rgba(0,0,0,.8);
   
   opacity: 0;
@@ -25,6 +25,7 @@ img {
 
 #refresh.show {
   opacity: 1;
+  z-index: 1;
   transition: opacity 0.4s ease-out;
 }
 
@@ -34,5 +35,13 @@ img {
   transform: translateY(-50%);
   color: #FFF;
   text-align: center;
+}
+
+.shot .meta-info {
+  display: none;
+}
+
+.shot .meta-info.show {
+  display: block;
 }
 
