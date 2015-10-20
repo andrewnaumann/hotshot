@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "menubar": "^2.2.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
     "request": "^2.65.0"
   },
   "devDependencies": {
