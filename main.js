@@ -1,6 +1,5 @@
 'use strict';
 var app = require('app');
-var dribbbleapi = require('./dribbbleapi');
 
 var mainWindow = null;
 var dribbbleData = null;
