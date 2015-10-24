@@ -11,37 +11,135 @@ img {
   max-width: 100%;
 }
 
-#refresh {
+body {
+  background-color: #F9F9F9;
+}
+
+.shot-list {
+  margin-top: 60px; /* Height of site-header */
+}
+
+.site-header {
   position: fixed;
-  top: 0;
-  height: 100%;
   width: 100%;
-  z-index: -1;
-  background: rgba(0,0,0,.8);
-  
-  opacity: 0;
-  transition: opacity 0.4s ease-in;
-}
-
-#refresh.show {
-  opacity: 1;
-  z-index: 1;
-  transition: opacity 0.4s ease-out;
-}
-
-#refresh h1 {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 60px;
+  background-color: #ea4c89;
   color: #FFF;
+  transition: top 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.site-header.header-up {
+  top: -60px;
+}
+
+.site-header.header-down {
+  top: 0px;
+}
+
+.site-header button {
+  margin: 10px;
+  border: none;
+  font-size: 20px;
+  background-color: inherit;
+  color: inherit;
+}
+.site-header button:focus {
+  outline: none;
+}
+
+.site-header-title {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+#main {
+  padding: 10px;
+}
+
+.shot {
+  background-color: #FFF;
+  padding: 10px 10px 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+}
+.shot-wrapper {
+  margin-bottom: 20px;
+}
+
+.shot-title {
+  color: #aaa;
+  font-size: 1.2rem;
+  margin: 5px 0;
+  display: inline-block;
+}
+
+.shot-likes {
+  color: #aaa;
+  float:right;
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.heart-icon {
+/*  max-height: 1.3rem;*/
+/*  vertical-align: middle;*/
+  margin-right: 5px;
+  color: #f8f8f8;
+}
+
+.attribution {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.shot-author {
+  font-size: 1.2rem;
+}
+
+.shot-author img {
+  max-width: 16px;
+  vertical-align: baseline;
+  float: left;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 20px;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ea4c89;
+  color: #FFF;
+  transition: bottom 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  outline: none;
+  z-index: 100;
   text-align: center;
 }
 
-.shot .meta-info {
-  display: none;
+.scroll-to-top:hover {
+  background-color: #D13370;  /* 10% darker */
+  color: #fff;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.shot .meta-info.show {
-  display: block;
+.scroll-to-top.button-up:focus {
+  outline: none;
 }
 
+.scroll-to-top.button-up {
+  bottom: 20px;
+}
+
+.scroll-to-top.button-down {
+  bottom: -50px;
+}
