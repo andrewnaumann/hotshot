@@ -7,15 +7,23 @@
   <link href="css/app.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-  
-  <header class="site-header header-down">
-    <button class="btn btn-default nav-button"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></button>
-    <h2 class="site-header-title">Top 100</h2>
+
+  <header class="site-header header-down settings-hidden">
+    <button id="show-settings-button" class="btn btn-default nav-button">
+      <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+    </button>
+    <h2 class="site-header-title">Hotshot</h2>
+    <div class="site-header-settings settings-hidden">
+      <ul class="settings-list">
+        <h2>Settings</h2>
+        <li id="quit-button">Quit</li>
+      </ul>
+    </div>
   </header>
   <div id="main">
     <!-- React Dumps content here! -->
   </div>
-  
+
   <button class="scroll-to-top button-down btn btn-default">
     <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
   </button>
