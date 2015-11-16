@@ -1,6 +1,6 @@
 'use strict';
 var app = require('app');
-
+var ipc = require('ipc');
 var mainWindow = null;
 var dribbbleData = null;
 
@@ -24,7 +24,11 @@ app.on('window-all-closed', function() {
 
 mb.on('show', function(){
 //  mb.window.webContents.send('focus');
-  mb.window.openDevTools();
+//  mb.window.openDevTools();
+});
+
+ipc.on('quit-button-clicked', function(event) {
+  app.quit();
 });
 
 
