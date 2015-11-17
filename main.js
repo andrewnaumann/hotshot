@@ -20,3 +20,7 @@ var mb = menubar({
 app.on('window-all-closed', function() {
   app.quit();
 });
+
+mb.on('show', function() {
+  mb.window.openDevTools();
+})
