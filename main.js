@@ -8,7 +8,7 @@ var menubar = require('menubar')
 
 var mb = menubar({
   index: 'file://' + __dirname + '/app/index.html',
-  icon: __dirname + '/app/assets/HotshotIcon.png',
+  icon: __dirname + '/app/assets/HotshotIcon2.png',
   width: 400,
   height: 700,
   'max-width': 440,
