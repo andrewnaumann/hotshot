@@ -1,10 +1,10 @@
 # Hotshot
-####v0.1.0
+####v0.2.0
 #### A menubar app for Dribbble.
 
 Hotshot is a simple menubar app for viewing the latest popular shots on Dribbble built with Github's Electron.
 
-![](http://i.imgur.com/yO7sm1Q.gif)
+![](http://i.imgur.com/g4Hs43y.gif)
 
 #### Installation
 - Clone the repo to somewhere on your computer using `git clone git@github.com:andrewnaumann/hotshot.git`
@@ -17,8 +17,7 @@ Hotshot is a simple menubar app for viewing the latest popular shots on Dribbble
 Hotshot is extremely barebones at the moment. At the current stage it is more of a proof of concept than a useful
 application.  
 Planned features include...
-- The ability to view more information about a shot by selecting it.
 - The ability to like shots.
-- The ability to view different feeds instead of just the latest popular ones.
+- The ability to view different feeds instead of just the top 100 popular shots.
 - Anything else that I can think would be cool 👻
 

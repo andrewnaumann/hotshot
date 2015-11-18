@@ -1,6 +1,6 @@
 {
   "name": "hotshot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Hotshot is a menubar application for viewing the popular dribble shots right from your menubar.",
   "main": "main.js",
   "scripts": {
