@@ -24,7 +24,7 @@ app.on('window-all-closed', function() {
 
 mb.on('show', function(){
 //  mb.window.webContents.send('focus');
-//  mb.window.openDevTools();
+  mb.window.openDevTools();
 });
 
 ipc.on('quit-button-clicked', function(event) {
