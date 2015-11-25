@@ -29,7 +29,7 @@ var Shot = React.createClass({
     return (
       <li className="shot-wrapper">
         <div className="shot">
-          <LazyLoad height={270}>
+          <LazyLoad height={270} threshold={350}>
           <img className="shot-image" key={this.props.id} src={this.props.imageUrl} />
           </LazyLoad>
           <h2 className="shot-title">
