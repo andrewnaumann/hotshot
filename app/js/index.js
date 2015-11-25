@@ -6,7 +6,7 @@ var request = require('request');
 var DRIBBBLE_ACCESS_TOKEN = "7db78f5cb574b2309af3ea772628b42269c6bfb6767b88ba13f5294d5b9cbb8d";
 var pageIndex = 1;
 var perPage = 100;
-var ipc = require('ipc');
+const ipcRenderer = require('electron').ipcRenderer;
 
 import LazyLoad from 'react-lazy-load';
 
@@ -181,7 +181,7 @@ function hasScrolled() {
 // Off canvas menu handling
 
 document.getElementById('quit-button').addEventListener('click', function() {
-  ipc.send('quit-button-clicked');
+  ipcRenderer.send('quit-button-clicked');
 })
 
 

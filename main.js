@@ -1,6 +1,6 @@
 'use strict';
 var app = require('app');
-var ipc = require('ipc');
+const ipcMain = require('electron').ipcMain;
 var mainWindow = null;
 var dribbbleData = null;
 
@@ -27,7 +27,7 @@ mb.on('show', function(){
   mb.window.openDevTools();
 });
 
-ipc.on('quit-button-clicked', function(event) {
+ipcMain.on('quit-button-clicked', function(event) {
   app.quit();
 });
 
