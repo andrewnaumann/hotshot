@@ -19,7 +19,7 @@
     <ul id="shot-list" class="shot-list">
       <template  v-for="shot in shotlist" track-by="id">
         <li transition="fade" class="shot">
-          <img class="shot__image" v-if=" hidpiMode && shot.images.hidpi " v-bind:src="shot.images.hidpi">
+          <img class="shot__image" v-if=" shot.animated && shot.images.hidpi " v-bind:src="shot.images.hidpi">
           <img class="shot__image" v-else v-bind:src="shot.images.normal">
 
           <div class="shot__meta">
