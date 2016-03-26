@@ -11,7 +11,7 @@ const mb = menubar({
   width: 428,
   height: 700,
   minWidth: 300,
-  maxWidth: 828,
+  maxWidth: 428,
   "show-dock-icon": true,
   'preload-window': true
 });
