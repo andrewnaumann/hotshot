@@ -4,7 +4,7 @@
   "description": "A Menubar app for Dribbble",
   "main": "main.js",
   "scripts": {
-    "package": "electron-packager ./ Hotshot --all --version=0.37.2 --out=~/Desktop --overwrite;"
+    "package": "electron-packager ./ Hotshot --platform=darwin --arch=x64 --version=0.37.2 --prune --overwrite;"
   },
   "repository": {
     "type": "git",
