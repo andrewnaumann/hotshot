@@ -2,12 +2,36 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Hotshot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div id="load-screen" class="overlay load-screen" v-show="display">
+      <p class="load-screen__message">Grabbing Latest Data...</p>
+    </div>
+    <header class="app-header">
+      <i id="close" class="fa fa-times-circle app-header__close-icon"></i>
+      <h1 class="app-header__heading">
+        Hotshot
+      </h1>
+    </header>
+    <ul id="shot-list" class="shot-list">
+      <template  v-for="shot in shotlist" track-by="id">
+        <li transition="fade" class="shot">
+          <img class="shot__image" v-if=" hidpiMode && shot.images.hidpi " v-bind:src="shot.images.hidpi">
+          <img class="shot__image" v-else v-bind:src="shot.images.normal">
+
+          <div class="shot__meta">
+            <p class="shot__meta__title" v-on:click="openURL(shot.html_url)">{{ shot.title }}</p>
+            <p class="shot__meta__likes"><i class="fa fa-heart"></i>{{ shot.likes_count }}</p>
+
+          </div>
+        </li>
+      </template>
+    </ul>
+    <button id="next-button" class="button" v-on:click="loadNextPage">Load more...</button>
+
+    <script src="app.js"></script>
   </body>
 </html>
