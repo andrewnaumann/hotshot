@@ -14,6 +14,8 @@ var scrollTimer = null;
 var refreshTimer = null;
 var refreshTimeout = 300000; // 5 minutes
 var dataIsStale = false;
+var newPageCounter = 0;
+var MAX_NEW_PAGES = 4;
 
 
 var vm = new Vue({
@@ -30,6 +32,7 @@ var vm = new Vue({
     },
     resetState: function() {
       this.shotlist = [];
+      newPageCounter = 0;
       requestDribbbleJSON(initialAPIURL);
     }
   },
@@ -40,6 +43,7 @@ var btn = new Vue({
   el: "#next-button",
   methods: {
     loadNextPage: function(event) {
+      newPageCounter = 0;
       requestDribbbleJSON(nextPageURL);
     }
   }
@@ -107,11 +111,14 @@ function getNextURL(headerString) {
 }
 
 function requestDribbbleJSON(url){
-  var oReq = new XMLHttpRequest({});
-  oReq.addEventListener("load", reqListener);
-  oReq.open("GET", url);
-  oReq.setRequestHeader('Authorization', 'Bearer ' + DRIBBBLE_ACCESS_TOKEN);
-  oReq.send();
+  if (newPageCounter <= MAX_NEW_PAGES) {
+    newPageCounter++;
+    var oReq = new XMLHttpRequest({});
+    oReq.addEventListener("load", reqListener);
+    oReq.open("GET", url);
+    oReq.setRequestHeader('Authorization', 'Bearer ' + DRIBBBLE_ACCESS_TOKEN);
+    oReq.send();
+  }
 }
 
 function handleScroll() {
@@ -121,6 +128,6 @@ function handleScroll() {
     var scrollPos = document.body.scrollTop;
 
     if ((bodyHeight - windowHeight - 200) < scrollPos) {
-      btn.loadNextPage();
+      requestDribbbleJSON(nextPageURL);
     }
 }
