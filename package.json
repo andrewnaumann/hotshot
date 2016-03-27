@@ -1,6 +1,6 @@
 {
   "name": "Hotshot",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "A Menubar app for Dribbble",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atom/electron-quick-start.git"
+    "url": "git+https://github.com/andrewnaumann/hotshot.git"
   },
   "keywords": [
     "Electron",
