@@ -30,6 +30,7 @@ ul {
 
 .shot-list {
   margin-top: 4rem;
+  margin-bottom: 0;
   display: flex;
   flex-flow: column;
   align-items:center;
