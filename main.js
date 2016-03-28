@@ -7,7 +7,7 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
 const mb = menubar({
-  icon: __dirname + '/HotshotIcon2.png',
+  icon: __dirname + '/hotshotmenubaricon.png',
   width: 428,
   height: 700,
   minWidth: 300,
