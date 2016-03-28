@@ -88,6 +88,7 @@ ul {
 }
 
 .app-header {
+  -webkit-app-region: drag;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -102,6 +103,8 @@ ul {
 }
 
 .app-header__heading {
+  -webkit-user-select: none;
+  cursor: default;
   background: linear-gradient(90deg, #EA4C89, #ff4524);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
