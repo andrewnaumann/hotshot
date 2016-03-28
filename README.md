@@ -1,13 +1,13 @@
 # Hotshot
-#### v0.3.0
 #### A menubar app for Dribbble.
+v0.3.0
 
 Hotshot is a simple menubar app for viewing the latest popular shots on [Dribbble](http://dribbble.com) built with Github's Electron.
 
-![](./appscreenshot.png)
-
 #### Download
-A zipped prebuilt .dmg file is available to download [here](https://github.com/andrewnaumann/hotshot/releases/download/0.3.0/Hotshot.zip)
+[Hotshot v0.3.0](https://github.com/andrewnaumann/hotshot/releases/download/0.3.0/Hotshot.zip)
+
+![](./appscreenshot.png)
 
 #### Building by Yourself
 - Clone the repo to somewhere on your computer using `git clone git@github.com:andrewnaumann/hotshot.git`
