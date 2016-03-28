@@ -6,7 +6,10 @@ Hotshot is a simple menubar app for viewing the latest popular shots on [Dribbbl
 
 ![](./appscreenshot.png)
 
-#### Installation
+#### Download
+A zipped prebuilt .dmg file is available to download [here](https://github.com/andrewnaumann/hotshot/releases/download/0.3.0/Hotshot.zip)
+
+#### Building by Yourself
 - Clone the repo to somewhere on your computer using `git clone git@github.com:andrewnaumann/hotshot.git`
 - Navigate inside the directory using `cd hotshot`
 - Install application dependencies by running `npm install`
