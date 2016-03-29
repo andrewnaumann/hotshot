@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function() {
@@ -22,7 +23,7 @@ gulp.task('browserSync', function() {
 gulp.task('images', function() {
   return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
     .pipe(imagemin())
-    .pip(gulp.dest('app/dist/images'));
+    .pipe(gulp.dest('app/dist/images'));
 });
 
 gulp.task('watch', ['browserSync', 'sass'], function() {
