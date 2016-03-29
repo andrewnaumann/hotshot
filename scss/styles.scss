@@ -53,6 +53,18 @@ a {
 
 }
 
+.social {
+  color: #333;
+}
+
+.social:visited {
+  color: #333;
+}
+
+.social:hover {
+  color: lighten(#333, 10%);
+}
+
 .image-wrapper {
 }
 
