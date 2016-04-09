@@ -1,5 +1,5 @@
 # Hotshot
-#### v0.3.0
+#### v0.3.1
 #### A menubar app for Dribbble.
 
 Hotshot is a simple menubar app for viewing the latest popular shots on [Dribbble](http://dribbble.com) built with Github's Electron.

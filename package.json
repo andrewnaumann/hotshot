@@ -1,6 +1,6 @@
 {
   "name": "Hotshot",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A Menubar app for Dribbble",
   "main": "main.js",
   "scripts": {
